@@ -1,0 +1,26 @@
+{
+    "name": "@manufarfaro/tatu",
+    "version": "0.1.0",
+    "main": "src/index.ts",
+    "scripts": {
+        "esbuild": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=browser --target=chrome58,firefox57,safari11,edge16",
+        "build": "tsc && yarn esbuild",
+        "start:dev": "concurrently \"yarn build:all\" \"nodemon -q server.ts\"  "
+    },
+    "dependencies": {
+        "@manufarfaro/checker-visibility-tracker": "workspace:*",
+        "@manufarfaro/mulita-core": "workspace:*",
+        "body-parser": "^1.20.2",
+        "concurrently": "^7.6.0",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "nodemon": "^2.0.22"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.17",
+        "@types/node": "^18.15.3",
+        "esbuild": "^0.17.11",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.5"
+    }
+}

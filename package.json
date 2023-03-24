@@ -1,0 +1,14 @@
+{
+  "name": "mulita",
+  "packageManager": "yarn@3.4.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:all": "yarn workspaces foreach run build",
+    "start:tatu:dev": "yarn workspace @manufarfaro/tatu run start:dev"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3"
+  }
+}
